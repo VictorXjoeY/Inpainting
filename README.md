@@ -13,14 +13,14 @@ Parte do conjunto de imagens utilizado é apresentado abaixo. Todas as imagens u
 ## Imagens Originais
 As imagens abaixo estão em sua forma original.
 
-|<img src="./Project/images/original/dogo2.bmp"   width="200px" alt="dogo2"/>|<img src="./Project/images/original/horse_car.bmp"   height="200px" alt="horse_car"/>|<img src="./Project/images/original/forbes.bmp"   width="200px" alt="forbes"/>|<img src="./Project/images/original/momo_fino.bmp"   width="200px" alt="momo_fino"/>|
+|<img src="./images/original/dogo2.bmp"   width="200px" alt="dogo2"/>|<img src="./images/original/horse_car.bmp"   height="200px" alt="horse_car"/>|<img src="./images/original/forbes.bmp"   width="200px" alt="forbes"/>|<img src="./images/original/momo_fino.bmp"   width="200px" alt="momo_fino"/>|
 |------------|------------|------------|------------|
 | Cachorro (retirada da [internet](https://pbs.twimg.com/profile_images/948761950363664385/Fpr2Oz35_400x400.jpg)) | Texto em foto (retirada de um [artigo](http://www.inf.ufrgs.br/~oliveira/pubs_files/inpainting.pdf)) | Forbes | Professor Moacir |
 
 ## Imagens Deterioradas
 As imagens abaixo foram rabiscadas artificialmente. A única imagem que não inserimos rabiscos foi a segunda imagem, que foi retirada de um [artigo](http://www.inf.ufrgs.br/~oliveira/pubs_files/inpainting.pdf).
 
-|<img src="./Project/images/deteriorated/dogo2.bmp"   width="200px" alt="dogo2"/>|<img src="./Project/images/deteriorated/horse_car.bmp"   height="200px" alt="horse_car"/>|<img src="./Project/images/deteriorated/forbes.bmp"   width="200px" alt="forbes"/>|<img src="./Project/images/deteriorated/momo_fino.bmp"   width="200px" alt="momo_fino"/>|
+|<img src="./images/deteriorated/dogo2.bmp"   width="200px" alt="dogo2"/>|<img src="./images/deteriorated/horse_car.bmp"   height="200px" alt="horse_car"/>|<img src="./images/deteriorated/forbes.bmp"   width="200px" alt="forbes"/>|<img src="./images/deteriorated/momo_fino.bmp"   width="200px" alt="momo_fino"/>|
 |------------|------------|------------|------------|
 | Cachorro (retirada da [internet](https://pbs.twimg.com/profile_images/948761950363664385/Fpr2Oz35_400x400.jpg)) | Texto em foto (retirada de um [artigo](http://www.inf.ufrgs.br/~oliveira/pubs_files/inpainting.pdf)) | Forbes | Professor Moacir |
 
@@ -32,7 +32,7 @@ O primeiro passo de ambos os métodos é calcular o número de ocorrências de c
 
 Vale notar que os métodos podem ser melhorados para que a máscara obtida represente não só algumas cores pré-determinadas pelos métodos, mas que represente também a "penumbra" que muitas ferramentas de edição inserem nas bordas dos traços. Para isso podemos extrair a máscara usando os métodos abaixo e depois preencher todos os *pixels* não preenchidos adjacentes a um ou mais *pixels* preenchidos que possuem um tom parecido, utilizando uma certa medida de distância. Para esse projeto tentamos usar uma medida de distância usando os canais H e S do espaço de cores HSV, mas, como não obtivemos muita precisão, optamos por usar apenas riscos "duros" no projeto para focar na parte principal: o Inpainting.
 
-|<img src="./Project/images/deteriorated/momo.bmp"   width="200px" alt="momo"/>|<img src="./Project/images/masks/momo.bmp"   width="200px" alt="momo"/>|
+|<img src="./images/deteriorated/momo.bmp"   width="200px" alt="momo"/>|<img src="./images/masks/momo.bmp"   width="200px" alt="momo"/>|
 |:-----------------------------------:|:-----------------------------------:|
 | Foto deteriorada | Máscara extraída |
 
@@ -70,7 +70,7 @@ Ao final do processo é obtida a imagem *G_k* restaurada.
 
 Abaixo estão alguns dos resultados do algoritmo.
 
-|<img src="./Project/images/inpainted/Gerchberg Papoulis/dogo2.bmp"   width="200px" alt="dogo2"/>|<img src="./Project/images/inpainted/Gerchberg Papoulis/horse_car.bmp"   height="200px" alt="horse_car"/>|<img src="./Project/images/inpainted/Gerchberg Papoulis/forbes.bmp"   width="200px" alt="forbes"/>|<img src="./Project/images/inpainted/Gerchberg Papoulis/momo_fino.bmp"   width="200px" alt="momo_fino"/>|
+|<img src="./images/inpainted/Gerchberg Papoulis/dogo2.bmp"   width="200px" alt="dogo2"/>|<img src="./images/inpainted/Gerchberg Papoulis/horse_car.bmp"   height="200px" alt="horse_car"/>|<img src="./images/inpainted/Gerchberg Papoulis/forbes.bmp"   width="200px" alt="forbes"/>|<img src="./images/inpainted/Gerchberg Papoulis/momo_fino.bmp"   width="200px" alt="momo_fino"/>|
 |------------|------------|------------|------------|
 | Cachorro (retirada da [internet](https://pbs.twimg.com/profile_images/948761950363664385/Fpr2Oz35_400x400.jpg)) | Texto em foto (retirada de um [artigo](http://www.inf.ufrgs.br/~oliveira/pubs_files/inpainting.pdf)) | Forbes | Professor Moacir |
 
@@ -84,14 +84,14 @@ A medida de distância utilizada foi similar ao RMSE, mas calculado apenas entre
 ### *Brute Force*
 Nesse algoritmo a busca pelo *pixel* *P* é feita em toda a imagem. Seu tempo de execução é altíssimo e, portanto, apenas conseguimos rodar para as imagens dogo1.bmp (100x100), dogo2.bmp (400x400), momo_fino.bmp (280x280) e momo.bmp (280x280).
 
-|<img src="./Project/images/inpainted/Brute Force/dogo1.bmp"   width="200px" alt="dogo1"/>|<img src="./Project/images/inpainted/Brute Force/dogo2.bmp"   height="200px" alt="dogo2"/>|<img src="./Project/images/inpainted/Brute Force/momo_fino.bmp"   width="200px" alt="momo_fino"/>|<img src="./Project/images/inpainted/Brute Force/momo.bmp"   width="200px" alt="momo"/>|
+|<img src="./images/inpainted/Brute Force/dogo1.bmp"   width="200px" alt="dogo1"/>|<img src="./images/inpainted/Brute Force/dogo2.bmp"   height="200px" alt="dogo2"/>|<img src="./images/inpainted/Brute Force/momo_fino.bmp"   width="200px" alt="momo_fino"/>|<img src="./images/inpainted/Brute Force/momo.bmp"   width="200px" alt="momo"/>|
 |------------|------------|------------|------------|
 | Cachorro 100x100 reconstruído | Cachorro 400x400 reconstruído | Moacir com rabiscos finos reconstruído | Moacir com rabiscos grossos reconstruído |
 
 ### *Local Brute Force*
 Nesse algoritmo fazemos a suposição de que as janelas mais similares não estão muito longe da região deteriorada, portanto a busca pelo *pixel* *P* é feita apenas em uma região 101x101 centrada em *Pd*. Isso permite que façamos *inpainting* em imagens maiores em tempo hábil, como a imagem abaixo.
 
-|<img src="./Project/images/deteriorated/forbes.bmp"   width="200px" alt="forbes"/>|<img src="./Project/images/inpainted/Local Brute Force/forbes.bmp"   width="200px" alt="forbes"/>|
+|<img src="./images/deteriorated/forbes.bmp"   width="200px" alt="forbes"/>|<img src="./images/inpainted/Local Brute Force/forbes.bmp"   width="200px" alt="forbes"/>|
 |------------|------------|
 | Forbes 961x1280 deteriorado | Forbes 961x1280 reconstruído |
 
@@ -102,7 +102,7 @@ Além disso, ao começarmos a tentar remover rabiscos mais grossos ou objetos ma
 
 A imagem abaixo é um bom exemplo da utilidade do *K* dinâmico, pois podemos ver que as regiões "deterioradas" são "grossas". Para as bordas dessas regiões o *K* usado é menor, o que reduz o tempo de execução.
 
-|<img src="./Project/images/original/forbes_profile.bmp"   width="200px" alt="forbes"/>|<img src="./Project/images/deteriorated/forbes_profile.bmp"   width="200px" alt="forbes"/>|<img src="./Project/images/masks/forbes_profile.bmp"   width="200px" alt="forbes"/>|<img src="./Project/images/inpainted/Local Dynamic Brute Force/forbes_profile.bmp"   width="200px" alt="forbes"/>|
+|<img src="./images/original/forbes_profile.bmp"   width="200px" alt="forbes"/>|<img src="./images/deteriorated/forbes_profile.bmp"   width="200px" alt="forbes"/>|<img src="./images/masks/forbes_profile.bmp"   width="200px" alt="forbes"/>|<img src="./images/inpainted/Local Dynamic Brute Force/forbes_profile.bmp"   width="200px" alt="forbes"/>|
 |------------|------------|------------|------------|
 | Forbes-Perfil 934x1280 original | Forbes-Perfil 934x1280 "deteriorado" | Forbes-Perfil 934x1280 máscara | Forbes-Perfil 934x1280 restaurado |
 
@@ -114,10 +114,10 @@ A suposição feita para o desenvolvimento desse algoritmo se deve ao fato de qu
 
 Podemos ver pela imagem *horse_car.bmp* que usar o *pixel* cuja janela *K*x*K* possui distância mínima não é sempre a melhor escolha. A média entre os 5 melhores candidatos resulta em um *inpainting* mais suave, removendo parte do ruído produzido pelos outros métodos de força bruta descritos.
 
-|<img src="./Project/images/deteriorated/horse_car.bmp"   width="200px" alt="horse_car_deteriorated"/>|
-<img src="./Project/images/masks/horse_car.bmp"   width="200px" alt="horse_car_mask"/>|
-<img src="./Project/images/inpainted/Local Brute Force/horse_car.bmp"   width="200px" alt="horse_car_local"/>|
-<img src="./Project/images/inpainted/Smart Brute Force/horse_car.bmp"   width="200px" alt="horse_car_smart"/>|
+|<img src="./images/deteriorated/horse_car.bmp"   width="200px" alt="horse_car_deteriorated"/>|
+<img src="./images/masks/horse_car.bmp"   width="200px" alt="horse_car_mask"/>|
+<img src="./images/inpainted/Local Brute Force/horse_car.bmp"   width="200px" alt="horse_car_local"/>|
+<img src="./images/inpainted/Smart Brute Force/horse_car.bmp"   width="200px" alt="horse_car_smart"/>|
 |------------|------------|------------|------------|
 | Imagem deteriorada | Máscara | Local Brute Force | Smart Brute Force |
 
@@ -129,10 +129,10 @@ Para o problema de remoção de rabiscos a avaliação dos resultados foi feita,
 
 Em geral observamos que os melhores resultados vieram do algoritmo *Smart Brute Force* enquanto os piores resultados vieram do *Gerchberg Papoulis*, visto que esse gera regiões visivelmente mais borradas (apesar de possuir o tempo de execução mais baixo) principalmente para imagens com vários detalhes como rostos. Podemos ver a diferença dos resultados entre esses dois algoritmos na imagem do Professor Moacir (momo.bmp) de dimensões 280x280:
 
-|<img src="./Project/images/inpainted/Smart Brute Force/momo.bmp"   width="200px" alt="momo_inpainted_brute"/>|
-<img src="./Project/images/difference/Smart Brute Force/momo.bmp"   width="200px" alt="momo_diff_brute"/>|
-<img src="./Project/images/inpainted/Gerchberg Papoulis/momo.bmp"   width="200px" alt="momo_inpainted_gerchberg"/>|
-<img src="./Project/images/difference/Gerchberg Papoulis/momo.bmp"   width="200px" alt="momo_diff_gerchberg"/>|
+|<img src="./images/inpainted/Smart Brute Force/momo.bmp"   width="200px" alt="momo_inpainted_brute"/>|
+<img src="./images/difference/Smart Brute Force/momo.bmp"   width="200px" alt="momo_diff_brute"/>|
+<img src="./images/inpainted/Gerchberg Papoulis/momo.bmp"   width="200px" alt="momo_inpainted_gerchberg"/>|
+<img src="./images/difference/Gerchberg Papoulis/momo.bmp"   width="200px" alt="momo_diff_gerchberg"/>|
 |------------|------------|------------|------------|
 | Smart Brute Force | Imagem da diferença Smart Brute Force | Gerchberg Papoulis | Imagem da diferença Gerchberg Papoulis |
 
@@ -199,7 +199,7 @@ Em seguida apresentamos alguns dos melhores resultados com comparativos visuais.
 
 O algoritmo Local Dynamic Brute Force obteve o melhor resultado com 6.646 de RMSE e um tempo de execução de 3 segundos.
 
-|<img src="./Project/images/original/dogo1.bmp"   width="200px" alt="dogo1_original"/>|<img src="./Project/images/deteriorated/dogo1.bmp"   width="200px" alt="dogo1_deteriorated"/>|<img src="./Project/images/inpainted/Local Dynamic Brute Force/dogo1.bmp"   width="200px" alt="dogo1_dynamic"/>|<img src="./Project/images/difference/Local Dynamic Brute Force/dogo1.bmp"   width="200px" alt="dogo1_diff"/>|
+|<img src="./images/original/dogo1.bmp"   width="200px" alt="dogo1_original"/>|<img src="./images/deteriorated/dogo1.bmp"   width="200px" alt="dogo1_deteriorated"/>|<img src="./images/inpainted/Local Dynamic Brute Force/dogo1.bmp"   width="200px" alt="dogo1_dynamic"/>|<img src="./images/difference/Local Dynamic Brute Force/dogo1.bmp"   width="200px" alt="dogo1_diff"/>|
 |------------|------------|------------|------------|
 | Original | Deteriorada | Restaurada | Diferença |
 
@@ -207,7 +207,7 @@ O algoritmo Local Dynamic Brute Force obteve o melhor resultado com 6.646 de RMS
 
 O algoritmo Smart Brute Force obteve o melhor resultado com 11.384 de RMSE e um tempo de execução de 36 segundos.
 
-|<img src="./Project/images/original/dogo2.bmp"   width="200px" alt="dogo2_original"/>|<img src="./Project/images/deteriorated/dogo2.bmp"   width="200px" alt="dogo2_deteriorated"/>|<img src="./Project/images/inpainted/Smart Brute Force/dogo2.bmp"   width="200px" alt="dogo2_smart"/>|<img src="./Project/images/difference/Smart Brute Force/dogo2.bmp"   width="200px" alt="dogo2_diff"/>|
+|<img src="./images/original/dogo2.bmp"   width="200px" alt="dogo2_original"/>|<img src="./images/deteriorated/dogo2.bmp"   width="200px" alt="dogo2_deteriorated"/>|<img src="./images/inpainted/Smart Brute Force/dogo2.bmp"   width="200px" alt="dogo2_smart"/>|<img src="./images/difference/Smart Brute Force/dogo2.bmp"   width="200px" alt="dogo2_diff"/>|
 |------------|------------|------------|------------|
 | Original | Deteriorada | Restaurada | Diferença |
 
@@ -215,7 +215,7 @@ O algoritmo Smart Brute Force obteve o melhor resultado com 11.384 de RMSE e um 
 
 O algoritmo Smart Brute Force obteve o melhor resultado com 21.102 de RMSE e um tempo de execução de 2 minutos e 55 segundos.
 
-|<img src="./Project/images/original/momo.bmp"   width="200px" alt="momo_original"/>|<img src="./Project/images/deteriorated/momo.bmp"   width="200px" alt="momo_deteriorated"/>|<img src="./Project/images/inpainted/Smart Brute Force/momo.bmp"   width="200px" alt="momo_smart"/>|<img src="./Project/images/difference/Smart Brute Force/momo.bmp"   width="200px" alt="momo_diff"/>|
+|<img src="./images/original/momo.bmp"   width="200px" alt="momo_original"/>|<img src="./images/deteriorated/momo.bmp"   width="200px" alt="momo_deteriorated"/>|<img src="./images/inpainted/Smart Brute Force/momo.bmp"   width="200px" alt="momo_smart"/>|<img src="./images/difference/Smart Brute Force/momo.bmp"   width="200px" alt="momo_diff"/>|
 |------------|------------|------------|------------|
 | Original | Deteriorada | Restaurada | Diferença |
 
@@ -223,7 +223,7 @@ O algoritmo Smart Brute Force obteve o melhor resultado com 21.102 de RMSE e um 
 
 O algoritmo Smart Brute Force obteve o melhor resultado com 12.567 de RMSE e um tempo de execução 24 segundos.
 
-|<img src="./Project/images/original/momo_fino.bmp"   width="200px" alt="momo_fino_original"/>|<img src="./Project/images/deteriorated/momo_fino.bmp"   width="200px" alt="momo_fino_deteriorated"/>|<img src="./Project/images/inpainted/Smart Brute Force/momo_fino.bmp"   width="200px" alt="momo_fino_smart"/>|<img src="./Project/images/difference/Smart Brute Force/momo_fino.bmp"   width="200px" alt="momo_fino_diff"/>|
+|<img src="./images/original/momo_fino.bmp"   width="200px" alt="momo_fino_original"/>|<img src="./images/deteriorated/momo_fino.bmp"   width="200px" alt="momo_fino_deteriorated"/>|<img src="./images/inpainted/Smart Brute Force/momo_fino.bmp"   width="200px" alt="momo_fino_smart"/>|<img src="./images/difference/Smart Brute Force/momo_fino.bmp"   width="200px" alt="momo_fino_diff"/>|
 |------------|------------|------------|------------|
 | Original | Deteriorada | Restaurada | Diferença |
 
@@ -231,7 +231,7 @@ O algoritmo Smart Brute Force obteve o melhor resultado com 12.567 de RMSE e um 
 
 O algoritmo Smart Brute Force obteve o melhor resultado com 20.614 de RMSE e um tempo de execução 7 minutos e 48 segundos.
 
-|<img src="./Project/images/original/horse_car.bmp"   width="200px" alt="horse_car_original"/>|<img src="./Project/images/deteriorated/horse_car.bmp"   width="200px" alt="horse_car_deteriorated"/>|<img src="./Project/images/inpainted/Smart Brute Force/horse_car.bmp"   width="200px" alt="horse_car_smart"/>|<img src="./Project/images/difference/Smart Brute Force/horse_car.bmp"   width="200px" alt="horse_car_diff"/>|
+|<img src="./images/original/horse_car.bmp"   width="200px" alt="horse_car_original"/>|<img src="./images/deteriorated/horse_car.bmp"   width="200px" alt="horse_car_deteriorated"/>|<img src="./images/inpainted/Smart Brute Force/horse_car.bmp"   width="200px" alt="horse_car_smart"/>|<img src="./images/difference/Smart Brute Force/horse_car.bmp"   width="200px" alt="horse_car_diff"/>|
 |------------|------------|------------|------------|
 | Original | Deteriorada | Restaurada | Diferença |
 
@@ -239,7 +239,7 @@ O algoritmo Smart Brute Force obteve o melhor resultado com 20.614 de RMSE e um 
 
 O algoritmo Local Dynamic Brute Force obteve o melhor resultado com 6.964 de RMSE e um tempo de execução 7 minutos e 21 segundos.
 
-|<img src="./Project/images/original/forbes.bmp"   width="200px" alt="forbes_original"/>|<img src="./Project/images/deteriorated/forbes.bmp"   width="200px" alt="forbes_deteriorated"/>|<img src="./Project/images/inpainted/Local Dynamic Brute Force/forbes.bmp"   width="200px" alt="forbes_dynamic"/>|<img src="./Project/images/difference/Local Dynamic Brute Force/forbes.bmp"   width="200px" alt="forbes_diff"/>|
+|<img src="./images/original/forbes.bmp"   width="200px" alt="forbes_original"/>|<img src="./images/deteriorated/forbes.bmp"   width="200px" alt="forbes_deteriorated"/>|<img src="./images/inpainted/Local Dynamic Brute Force/forbes.bmp"   width="200px" alt="forbes_dynamic"/>|<img src="./images/difference/Local Dynamic Brute Force/forbes.bmp"   width="200px" alt="forbes_diff"/>|
 |------------|------------|------------|------------|
 | Original | Deteriorada | Restaurada | Diferença |
 
@@ -271,49 +271,49 @@ Para cada imagem é apresentada a imagem original a imagem com adição de verme
 
 ### Remoção de marcas na pele 934x1280 (forbes_profile.bmp)
 
-|<img src="./Project/images/original/forbes_profile.bmp"   width="300px" alt="forbes_profile_original"/>|
-<img src="./Project/images/deteriorated/forbes_profile.bmp"   width="300px" alt="forbes_profile_deteriorated"/>|
-<img src="./Project/images/inpainted/Local Dynamic Brute Force/forbes_profile.bmp"   width="300px" alt="forbes_profile_inpainted_brute"/>|
+|<img src="./images/original/forbes_profile.bmp"   width="300px" alt="forbes_profile_original"/>|
+<img src="./images/deteriorated/forbes_profile.bmp"   width="300px" alt="forbes_profile_deteriorated"/>|
+<img src="./images/inpainted/Local Dynamic Brute Force/forbes_profile.bmp"   width="300px" alt="forbes_profile_inpainted_brute"/>|
 |------------|------------|------------|
 | Original | "Deteriorada" | Local Dynamic Brute Force |
 
 ### Remoção do PI 972x648 (gabi_star.bmp)
 
-|<img src="./Project/images/original/gabi_star.bmp"   width="300px" alt="gabi_star_original"/>|
-<img src="./Project/images/deteriorated/gabi_star.bmp"   width="300px" alt="gabi_star_deteriorated"/>|
-<img src="./Project/images/inpainted/Smart Brute Force/gabi_star.bmp"   width="300px" alt="gabi_star_smart"/>|
+|<img src="./images/original/gabi_star.bmp"   width="300px" alt="gabi_star_original"/>|
+<img src="./images/deteriorated/gabi_star.bmp"   width="300px" alt="gabi_star_deteriorated"/>|
+<img src="./images/inpainted/Smart Brute Force/gabi_star.bmp"   width="300px" alt="gabi_star_smart"/>|
 |------------|------------|------------|
 | Original | "Deteriorada" | Smart Brute Force |
 
 ### Remoção do colar 810x540 (team.bmp)
 
-|<img src="./Project/images/original/team.bmp"   width="300px" alt="team_original"/>|
-<img src="./Project/images/deteriorated/team.bmp"   width="300px" alt="team_deteriorated"/>|
-<img src="./Project/images/inpainted/Smart Brute Force/team.bmp"   width="300px" alt="team_smart"/>|
+|<img src="./images/original/team.bmp"   width="300px" alt="team_original"/>|
+<img src="./images/deteriorated/team.bmp"   width="300px" alt="team_deteriorated"/>|
+<img src="./images/inpainted/Smart Brute Force/team.bmp"   width="300px" alt="team_smart"/>|
 |------------|------------|------------|
 | Original | "Deteriorada" | Smart Brute Force |
 
 ### Remoção da tatuagem no rosto 769x1024 (mike.bmp)
 
-|<img src="./Project/images/original/mike.bmp"   width="300px" alt="mike_original"/>|
-<img src="./Project/images/deteriorated/mike.bmp"   width="300px" alt="mike_deteriorated"/>|
-<img src="./Project/images/inpainted/Smart Brute Force/mike.bmp"   width="300px" alt="mike_smart"/>|
+|<img src="./images/original/mike.bmp"   width="300px" alt="mike_original"/>|
+<img src="./images/deteriorated/mike.bmp"   width="300px" alt="mike_deteriorated"/>|
+<img src="./images/inpainted/Smart Brute Force/mike.bmp"   width="300px" alt="mike_smart"/>|
 |------------|------------|------------|
 | Original | "Deteriorada" | Smart Brute Force |
 
 ### Remoção das bicicletas da praia 1210x1613 (praia.bmp)
 
-|<img src="./Project/images/original/praia.bmp"   width="300px" alt="praia_original"/>|
-<img src="./Project/images/deteriorated/praia.bmp"   width="300px" alt="praia_deteriorated"/>|
-<img src="./Project/images/inpainted/Smart Brute Force/praia.bmp"   width="300px" alt="praia_smart"/>|
+|<img src="./images/original/praia.bmp"   width="300px" alt="praia_original"/>|
+<img src="./images/deteriorated/praia.bmp"   width="300px" alt="praia_deteriorated"/>|
+<img src="./images/inpainted/Smart Brute Force/praia.bmp"   width="300px" alt="praia_smart"/>|
 |------------|------------|------------|
 | Original | "Deteriorada" | Smart Brute Force |
 
 ### Remoção da pessoa em frente ao zoológico 625x394 ([zoo.bmp](https://github.com/fivemok/image-inpainting))
 
-|<img src="./Project/images/original/zoo.bmp"   width="300px" alt="zoo_original"/>|
-<img src="./Project/images/deteriorated/zoo.bmp"   width="300px" alt="zoo_deteriorated"/>|
-<img src="./Project/images/inpainted/Smart Brute Force/zoo.bmp"   width="300px" alt="zoo_smart"/>|
+|<img src="./images/original/zoo.bmp"   width="300px" alt="zoo_original"/>|
+<img src="./images/deteriorated/zoo.bmp"   width="300px" alt="zoo_deteriorated"/>|
+<img src="./images/inpainted/Smart Brute Force/zoo.bmp"   width="300px" alt="zoo_smart"/>|
 |------------|------------|------------|
 | Original | "Deteriorada" | Smart Brute Force |
 
