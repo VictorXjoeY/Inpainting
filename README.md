@@ -114,10 +114,7 @@ A suposição feita para o desenvolvimento desse algoritmo se deve ao fato de qu
 
 Podemos ver pela imagem *horse_car.bmp* que usar o *pixel* cuja janela *K*x*K* possui distância mínima não é sempre a melhor escolha. A média entre os 5 melhores candidatos resulta em um *inpainting* mais suave, removendo parte do ruído produzido pelos outros métodos de força bruta descritos.
 
-|<img src="./images/deteriorated/horse_car.bmp"   width="200px" alt="horse_car_deteriorated"/>|
-<img src="./images/masks/horse_car.bmp"   width="200px" alt="horse_car_mask"/>|
-<img src="./images/inpainted/Local Brute Force/horse_car.bmp"   width="200px" alt="horse_car_local"/>|
-<img src="./images/inpainted/Smart Brute Force/horse_car.bmp"   width="200px" alt="horse_car_smart"/>|
+|<img src="./images/deteriorated/horse_car.bmp"   width="200px" alt="horse_car_deteriorated"/>|<img src="./images/masks/horse_car.bmp"   width="200px" alt="horse_car_mask"/>|<img src="./images/inpainted/Local Brute Force/horse_car.bmp"   width="200px" alt="horse_car_local"/>|<img src="./images/inpainted/Smart Brute Force/horse_car.bmp"   width="200px" alt="horse_car_smart"/>|
 |------------|------------|------------|------------|
 | Imagem deteriorada | Máscara | Local Brute Force | Smart Brute Force |
 
@@ -129,10 +126,7 @@ Para o problema de remoção de rabiscos a avaliação dos resultados foi feita,
 
 Em geral observamos que os melhores resultados vieram do algoritmo *Smart Brute Force* enquanto os piores resultados vieram do *Gerchberg Papoulis*, visto que esse gera regiões visivelmente mais borradas (apesar de possuir o tempo de execução mais baixo) principalmente para imagens com vários detalhes como rostos. Podemos ver a diferença dos resultados entre esses dois algoritmos na imagem do Professor Moacir (momo.bmp) de dimensões 280x280:
 
-|<img src="./images/inpainted/Smart Brute Force/momo.bmp"   width="200px" alt="momo_inpainted_brute"/>|
-<img src="./images/difference/Smart Brute Force/momo.bmp"   width="200px" alt="momo_diff_brute"/>|
-<img src="./images/inpainted/Gerchberg Papoulis/momo.bmp"   width="200px" alt="momo_inpainted_gerchberg"/>|
-<img src="./images/difference/Gerchberg Papoulis/momo.bmp"   width="200px" alt="momo_diff_gerchberg"/>|
+|<img src="./images/inpainted/Smart Brute Force/momo.bmp"   width="200px" alt="momo_inpainted_brute"/>|<img src="./images/difference/Smart Brute Force/momo.bmp"   width="200px" alt="momo_diff_brute"/>|<img src="./images/inpainted/Gerchberg Papoulis/momo.bmp"   width="200px" alt="momo_inpainted_gerchberg"/>|<img src="./images/difference/Gerchberg Papoulis/momo.bmp"   width="200px" alt="momo_diff_gerchberg"/>|
 |------------|------------|------------|------------|
 | Smart Brute Force | Imagem da diferença Smart Brute Force | Gerchberg Papoulis | Imagem da diferença Gerchberg Papoulis |
 
@@ -271,49 +265,37 @@ Para cada imagem é apresentada a imagem original a imagem com adição de verme
 
 ### Remoção de marcas na pele 934x1280 (forbes_profile.bmp)
 
-|<img src="./images/original/forbes_profile.bmp"   width="300px" alt="forbes_profile_original"/>|
-<img src="./images/deteriorated/forbes_profile.bmp"   width="300px" alt="forbes_profile_deteriorated"/>|
-<img src="./images/inpainted/Local Dynamic Brute Force/forbes_profile.bmp"   width="300px" alt="forbes_profile_inpainted_brute"/>|
+|<img src="./images/original/forbes_profile.bmp"   width="300px" alt="forbes_profile_original"/>|<img src="./images/deteriorated/forbes_profile.bmp"   width="300px" alt="forbes_profile_deteriorated"/>|<img src="./images/inpainted/Local Dynamic Brute Force/forbes_profile.bmp"   width="300px" alt="forbes_profile_inpainted_brute"/>|
 |------------|------------|------------|
 | Original | "Deteriorada" | Local Dynamic Brute Force |
 
 ### Remoção do PI 972x648 (gabi_star.bmp)
 
-|<img src="./images/original/gabi_star.bmp"   width="300px" alt="gabi_star_original"/>|
-<img src="./images/deteriorated/gabi_star.bmp"   width="300px" alt="gabi_star_deteriorated"/>|
-<img src="./images/inpainted/Smart Brute Force/gabi_star.bmp"   width="300px" alt="gabi_star_smart"/>|
+|<img src="./images/original/gabi_star.bmp"   width="300px" alt="gabi_star_original"/>|<img src="./images/deteriorated/gabi_star.bmp"   width="300px" alt="gabi_star_deteriorated"/>|<img src="./images/inpainted/Smart Brute Force/gabi_star.bmp"   width="300px" alt="gabi_star_smart"/>|
 |------------|------------|------------|
 | Original | "Deteriorada" | Smart Brute Force |
 
 ### Remoção do colar 810x540 (team.bmp)
 
-|<img src="./images/original/team.bmp"   width="300px" alt="team_original"/>|
-<img src="./images/deteriorated/team.bmp"   width="300px" alt="team_deteriorated"/>|
-<img src="./images/inpainted/Smart Brute Force/team.bmp"   width="300px" alt="team_smart"/>|
+|<img src="./images/original/team.bmp"   width="300px" alt="team_original"/>|<img src="./images/deteriorated/team.bmp"   width="300px" alt="team_deteriorated"/>|<img src="./images/inpainted/Smart Brute Force/team.bmp"   width="300px" alt="team_smart"/>|
 |------------|------------|------------|
 | Original | "Deteriorada" | Smart Brute Force |
 
 ### Remoção da tatuagem no rosto 769x1024 (mike.bmp)
 
-|<img src="./images/original/mike.bmp"   width="300px" alt="mike_original"/>|
-<img src="./images/deteriorated/mike.bmp"   width="300px" alt="mike_deteriorated"/>|
-<img src="./images/inpainted/Smart Brute Force/mike.bmp"   width="300px" alt="mike_smart"/>|
+|<img src="./images/original/mike.bmp"   width="300px" alt="mike_original"/>|<img src="./images/deteriorated/mike.bmp"   width="300px" alt="mike_deteriorated"/>|<img src="./images/inpainted/Smart Brute Force/mike.bmp"   width="300px" alt="mike_smart"/>|
 |------------|------------|------------|
 | Original | "Deteriorada" | Smart Brute Force |
 
 ### Remoção das bicicletas da praia 1210x1613 (praia.bmp)
 
-|<img src="./images/original/praia.bmp"   width="300px" alt="praia_original"/>|
-<img src="./images/deteriorated/praia.bmp"   width="300px" alt="praia_deteriorated"/>|
-<img src="./images/inpainted/Smart Brute Force/praia.bmp"   width="300px" alt="praia_smart"/>|
+|<img src="./images/original/praia.bmp"   width="300px" alt="praia_original"/>|<img src="./images/deteriorated/praia.bmp"   width="300px" alt="praia_deteriorated"/>|<img src="./images/inpainted/Smart Brute Force/praia.bmp"   width="300px" alt="praia_smart"/>|
 |------------|------------|------------|
 | Original | "Deteriorada" | Smart Brute Force |
 
 ### Remoção da pessoa em frente ao zoológico 625x394 ([zoo.bmp](https://github.com/fivemok/image-inpainting))
 
-|<img src="./images/original/zoo.bmp"   width="300px" alt="zoo_original"/>|
-<img src="./images/deteriorated/zoo.bmp"   width="300px" alt="zoo_deteriorated"/>|
-<img src="./images/inpainted/Smart Brute Force/zoo.bmp"   width="300px" alt="zoo_smart"/>|
+|<img src="./images/original/zoo.bmp"   width="300px" alt="zoo_original"/>|<img src="./images/deteriorated/zoo.bmp"   width="300px" alt="zoo_deteriorated"/>|<img src="./images/inpainted/Smart Brute Force/zoo.bmp"   width="300px" alt="zoo_smart"/>|
 |------------|------------|------------|
 | Original | "Deteriorada" | Smart Brute Force |
 
